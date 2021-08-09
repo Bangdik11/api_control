@@ -12,7 +12,7 @@
         $sql = "INSERT INTO tb_gula (id_pasien, gula, berat, tgl)
 
         VALUES
-                ($id_pasien,$gula,$berat,$tgl)";
+                ($id_pasien,'$gula','$berat','$tgl')";
         $query=mysqli_query($konnek,$sql);
                 //aktivitas
     if(!$query)

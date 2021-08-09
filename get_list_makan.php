@@ -41,6 +41,6 @@
             if(!isset($query)>0){
                 echo json_encode(array('value'=>0, 'pesan' =>'data tidak ada', 'data'=>$data));
             }else{
-                echo json_encode(array('value'=>1, 'pesan' =>'berhasil login', 'data'=>$data));
+                echo json_encode(array('value'=>1, 'pesan' =>'berhasil ambil data', 'data'=>$data,'tanggal'=>$data_tgl));
             }
 ?>
