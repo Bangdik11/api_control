@@ -20,7 +20,7 @@
                 $baris = array_merge($baris,array("lihat"=>1));
             }
             // $baris[lihat]=0;
-            print_r($baris);
+            // print_r($baris);
             // print_r($queryMakanan);
             // print_r($queryAktivitas);
             
