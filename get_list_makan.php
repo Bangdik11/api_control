@@ -34,7 +34,8 @@
         $data['pagi']=$pagi;
         $data['siang']=$siang;
         $data['malam']=$malam;
-        
+        $sql = "UPDATE  tb_makanan set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
+        $queryl = mysqli_query($konnek,$sql);
         // print_r($pagi);
         // print_r($pagi) ;
             if(!isset($query)>0){

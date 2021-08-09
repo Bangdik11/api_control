@@ -12,7 +12,9 @@
             // print_r($baris);
             // echo $baris['makanan'];
             
-        }
+        } 
+        $sql = "UPDATE  tb_aktivitas set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
+        $queryl = mysqli_query($konnek,$sql);
         // $arr=mysqli_fetch_array($query);
         // print_r(mysqli_fetch_assoc($query));
         // print_r($query);

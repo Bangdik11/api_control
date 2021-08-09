@@ -20,7 +20,7 @@
         }
        
        
-        $sql = "INSERT INTO tb_makanan (id_user, waktu, makanan, tanggal)
+        $sql = "INSERT INTO tb_makanan (id_user, waktu, makanan, tanggal,0)
 
         VALUES
                 $data";
@@ -38,7 +38,7 @@
         }
        
        
-        $sql = "INSERT INTO tb_aktivitas (id_user, waktu, aktivitas, tanggal)
+        $sql = "INSERT INTO tb_aktivitas (id_user, waktu, aktivitas, tanggal,0)
 
         VALUES
                 $data2";

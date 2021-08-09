@@ -16,7 +16,7 @@
         $query=mysqli_query($konnek,$sql);
                 //aktivitas
     if(!$query)
-        echo json_encode(array('value'=>0, 'pesan'=> "gagal input data"));
+        echo json_encode(array('value'=>0, 'pesan'=> mysqli_error($konnek)));
     else
     echo json_encode(array('value'=>1, 'pesan'=> "berhasil input data"));
 ?>
