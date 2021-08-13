@@ -9,7 +9,7 @@
         $query = mysqli_query($konnek,$sql);
         while ($baris = mysqli_fetch_assoc($query) ) {
              $sqlKomentar = "SELECT * FROM tb_komentar where  id_pasien = $id_user and tgl_keluhan = $baris[tanggal]";
-            
+            echo $baris[tanggal];
              $queryKomentar = mysqli_query($konnek,$sqlKomentar);
              while ($bariss = mysqli_fetch_assoc($queryKomentar) ) {
                 
