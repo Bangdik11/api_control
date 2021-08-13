@@ -49,6 +49,7 @@
                 }else{
                     $response["value"] = 0;
                     $response["pesan"] = mysqli_error($konnek);
+                    $response["query"] = $sql;
                     echo json_encode($response);
                 }
         
