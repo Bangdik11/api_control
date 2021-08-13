@@ -7,6 +7,15 @@
         $data = array();
         $query = mysqli_query($konnek,$sql);
         while ($baris = mysqli_fetch_assoc($query) ) {
+             $sqlKomentar = "SELECT * FROM tb_komentar where lihat = 0 and id_pasien = $id_user";
+            
+             $queryKomentar = mysqli_query($konnek,$sqlKomentar);
+            
+             if($queryKomentar->num_rows>0){
+                 $baris = array_merge($baris,array("lihat"=>0));
+             }else{
+                 $baris = array_merge($baris,array("lihat"=>1));
+             }
             $data[] = $baris;
         }
             if(!isset($query)>0){
