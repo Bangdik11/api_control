@@ -7,7 +7,7 @@
         $data = array();
         $query = mysqli_query($konnek,$sql);
         while ($baris = mysqli_fetch_assoc($query) ) {
-             $sqlKomentar = "SELECT * FROM tb_komentar where lihat = 0 and id_pasien = $id_user";
+             $sqlKomentar = "SELECT * FROM tb_komentar where lihat = 0 and id_pasien = $id_user and tanggal = '$baris['tanggal']";
             
              $queryKomentar = mysqli_query($konnek,$sqlKomentar);
             
