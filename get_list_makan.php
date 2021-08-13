@@ -36,10 +36,11 @@
         $data['malam']=$malam;
         $sqlUser = "SELECT * FROM tb_user where  id_user = '$id_user'";
         $queryUser = mysqli_query($konnek,$sqlUser);
-        $dataUser=mysqli_fetch_assoc($queryUser);
-        if($queryUser['tipe']=="Dokter"){
-        $sql = "UPDATE  tb_makanan set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
-        $queryl = mysqli_query($konnek,$sql);
+        while ($dataUser = mysqli_fetch_assoc($query) ) {
+            if($queryUser['tipe']=="Dokter"){
+            $sql = "UPDATE  tb_makanan set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
+            $queryl = mysqli_query($konnek,$sql);
+            }
         }
         // print_r($pagi);
         // print_r($pagi) ;
