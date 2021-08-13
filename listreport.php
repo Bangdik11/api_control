@@ -18,6 +18,7 @@
              }
             $data[] = $baris;
         }
+        print_r $data;
             if(!isset($query)>0){
                 
                 echo json_encode(array('value'=>0, 'pesan' =>'data tidak ada', 'tipe'=>''));
