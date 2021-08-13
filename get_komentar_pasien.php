@@ -11,8 +11,8 @@
         $id_dokter = $query['id_dokter'];
         $sqlDokter = "SELECT * FROM tb_user where  id_user = '$id_dokter' ";
         $queryDokter = mysqli_fetch_assoc(mysqli_query($konnek,$sqlDokter));
-        $sql = "UPDATE  tb_komentar set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
-        $queryl = mysqli_query($konnek,$sql);
+        $sqll = "UPDATE  tb_komentar set lihat = 1 where  id_pasien = '$id_user' and tanggal = '$data_tgl' ";
+        $queryl = mysqli_query($konnek,$sqll);
         // print_r($pagi);
         // print_r($pagi) ;
             if(!isset($query)>0){
