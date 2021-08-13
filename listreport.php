@@ -8,11 +8,11 @@
         $data = array();
         $query = mysqli_query($konnek,$sql);
         while ($baris = mysqli_fetch_assoc($query) ) {
-             $sqlKomentar = "SELECT * FROM tb_komentar where  id_pasien = $id_user and tgl_keluhan = $baris[tanggal]";
+             $sqlKomentar = "SELECT * FROM tb_komentar where id_pasien = $id_user and tgl_keluhan = '$baris[tanggal]'";
             // echo $baris[tanggal];
              $queryKomentar = mysqli_query($konnek,$sqlKomentar);
             //  echo mysqli_fetch_assoc($queryKomentar);
-            echo mysqli_error($konnek);
+            // echo mysqli_error($konnek);
              while ($bariss = mysqli_fetch_assoc($queryKomentar) ) {
                 
                 // if($queryKomentar->num_rows>0){
