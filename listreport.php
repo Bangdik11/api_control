@@ -1,6 +1,7 @@
 <?php
 
     require_once('koneksi.php');
+    echo "asda";
     $respons = array();
     $id_user = $_POST['id_user'];
         $sql = "SELECT DISTINCT id_user, tanggal  FROM tb_makanan where  id_user = '$id_user'";
