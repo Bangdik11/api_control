@@ -16,7 +16,7 @@
              while ($bariss = mysqli_fetch_assoc($queryKomentar) ) {
                 
                 // if($queryKomentar->num_rows>0){
-                     echo $bariss;
+                    //  echo $bariss;
                     $baris = array_merge($baris,array("lihat"=>$bariss["lihat"]));
                 // }else{
                 //     $baris = array_merge($baris,array("lihat"=>1));
