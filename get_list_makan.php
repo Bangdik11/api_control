@@ -34,8 +34,13 @@
         $data['pagi']=$pagi;
         $data['siang']=$siang;
         $data['malam']=$malam;
+        $sqlUser = "SELECT * FROM tb_user where  id_user = '$id_user'";
+        $queryUser = mysqli_query($konnek,$sqlsqlUser);
+        $dataUser=mysqli_fetch_assoc($queryUser);
+        if($queryUser['tipe']=="Dokter"){
         $sql = "UPDATE  tb_makanan set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
         $queryl = mysqli_query($konnek,$sql);
+        }
         // print_r($pagi);
         // print_r($pagi) ;
             if(!isset($query)>0){
