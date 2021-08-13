@@ -37,6 +37,7 @@
         $sqlUser = "SELECT * FROM tb_user where  id_user = '$id_user'";
         $queryUser = mysqli_query($konnek,$sqlUser);
         while ($dataUser = mysqli_fetch_assoc($query) ) {
+            $tipe=$dataUser['tipe']=="Dokter";
             if($dataUser['tipe']=="Dokter"){
             $sql = "UPDATE  tb_makanan set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
             $queryl = mysqli_query($konnek,$sql);
@@ -47,6 +48,6 @@
             if(!isset($query)>0){
                 echo json_encode(array('value'=>0, 'pesan' =>'data tidak ada', 'data'=>$data));
             }else{
-                echo json_encode(array('value'=>1, 'pesan' =>mysqli_error($konnek), 'data'=>$data,'tanggal'=>$data_tgl));
+                echo json_encode(array('value'=>1, 'pesan' =>$tipe, 'data'=>$data,'tanggal'=>$data_tgl));
             }
 ?>
