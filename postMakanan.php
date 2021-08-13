@@ -16,11 +16,11 @@
             }else{
                 $koma=false;
             }
-            $data=$data."('$id_user','$waktu','$value','$tgl')";
+            $data=$data."('$id_user','$waktu','$value','$tgl',0)";
         }
        
        
-        $sql = "INSERT INTO tb_makanan (id_user, waktu, makanan, tanggal,0)
+        $sql = "INSERT INTO tb_makanan (id_user, waktu, makanan, tanggal,lihat)
 
         VALUES
                 $data";
@@ -34,11 +34,11 @@
             }else{
                 $koma=false;
             }
-            $data2=$data2."('$id_user','$waktu','$value2','$tgl')";
+            $data2=$data2."('$id_user','$waktu','$value2','$tgl',0)";
         }
        
        
-        $sql = "INSERT INTO tb_aktivitas (id_user, waktu, aktivitas, tanggal,0)
+        $sql = "INSERT INTO tb_aktivitas (id_user, waktu, aktivitas, tanggal,lihat)
 
         VALUES
                 $data2";
