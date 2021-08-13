@@ -48,8 +48,8 @@
                     echo json_encode($response);
                 }else{
                     $response["value"] = 0;
-                    $response["pesan"] = mysqli_error($konnek);
-                    $response["query"] = $sql;
+                    // $response["pesan"] = mysqli_error($konnek);
+                    $response["pesan"] = $sql;
                     echo json_encode($response);
                 }
         
