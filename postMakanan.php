@@ -48,7 +48,7 @@
                     echo json_encode($response);
                 }else{
                     $response["value"] = 0;
-                    $response["pesan"] = "oops! username sudah ada!";
+                    $response["pesan"] = mysqli_error($konnek);
                     echo json_encode($response);
                 }
         
