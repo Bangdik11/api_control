@@ -37,7 +37,7 @@
         $sqlUser = "SELECT * FROM tb_user where  id_user = '$id_user'";
         $queryUser = mysqli_query($konnek,$sqlUser);
         while ($dataUser = mysqli_fetch_assoc($query) ) {
-            $tipe=$dataUser['tipe']=="Dokter";
+            $tipe=$dataUser;
             if($dataUser['tipe']=="Dokter"){
             $sql = "UPDATE  tb_makanan set lihat = 1 where  id_user = '$id_user' and tanggal = '$data_tgl' ";
             $queryl = mysqli_query($konnek,$sql);
