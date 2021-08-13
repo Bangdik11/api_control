@@ -8,7 +8,7 @@
         $data = array();
         $query = mysqli_query($konnek,$sql);
         while ($baris = mysqli_fetch_assoc($query) ) {
-             $sqlKomentar = "SELECT * FROM tb_komentar where lihat = 0 and id_pasien = $id_user and tanggal = '$baris['tanggal']";
+             $sqlKomentar = "SELECT * FROM tb_komentar where lihat = 0 and id_pasien = $id_user and tanggal = $baris[tanggal]";
             
              $queryKomentar = mysqli_query($konnek,$sqlKomentar);
             
@@ -19,7 +19,7 @@
              }
             $data[] = $baris;
         }
-        print_r $data;
+        // print_r $data;
             if(!isset($query)>0){
                 
                 echo json_encode(array('value'=>0, 'pesan' =>'data tidak ada', 'tipe'=>''));
