@@ -9,8 +9,9 @@
         $query = mysqli_query($konnek,$sql);
         while ($baris = mysqli_fetch_assoc($query) ) {
              $sqlKomentar = "SELECT * FROM tb_komentar where  id_pasien = $id_user and tgl_keluhan = $baris[tanggal]";
-            echo $baris[tanggal];
+            // echo $baris[tanggal];
              $queryKomentar = mysqli_query($konnek,$sqlKomentar);
+             print_r mysqli_fetch_assoc($queryKomentar);
              while ($bariss = mysqli_fetch_assoc($queryKomentar) ) {
                 
                 // if($queryKomentar->num_rows>0){
