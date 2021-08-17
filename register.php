@@ -6,7 +6,8 @@
 	$email = $_POST['email'];
 	$pass = $_POST['password'];
 	$nama_lengkap = $_POST['nama_lengkap'];
-	$tgl = date("Y-m-d");
+	$tgl = $_POST['tgl'];
+	// $tgl = date("Y-m-d");
 	//$username =$_POST['username'];
 
 	$sql = "INSERT INTO tb_user (username,email,password,nama_lengkap,tgl_lahir) values ('$user','$email','$pass','$nama_lengkap','$tgl')";
